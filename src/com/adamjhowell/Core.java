@@ -1,6 +1,9 @@
 package com.adamjhowell;
 
 
+import org.slf4j.Logger;
+
+
 /**
  * Created by Adam Howell on 2016-05-19.
  * This will show my understanding of the Core requirements for the Java Apprentice badge.
@@ -17,8 +20,10 @@ class Core
 	 * Write code to show exception handling including examples of checked, unchecked, and Error exceptions.
 	 * Write your own enum type.  Describe when you would use it.
 	 */
-	static void LifeCycle()
+	static void LifeCycle( Logger logger )
 	{
+		logger.debug( "LifeCycle() method started." );
+
 		// Describe the lifecycle of an object instance in Java and how garbage collection works.
 		System.out.println( "\nThe lifecycle of an object is how long it exists in memory." );
 		System.out.println( "Sometime mistakenly equated to 'scope', an object will live longer than its scope." );
@@ -28,14 +33,20 @@ class Core
 		System.out.println( "Garbage collection in Java is automatic, but can be 'coerced' by using the 'System.gc()' call." );
 		System.out.println( "This will not immediately run GC, as the VM has final say on when that happens." );
 		System.out.println( "But it may cause GC to happen earlier than it normally would." );
+
+		logger.debug( "LifeCycle() method ended." );
 	}
 
 
-	static void BasicDataTypes()
+	static void BasicDataTypes( Logger logger )
 	{
+		logger.debug( "BasicDataTypes() method started." );
+
 		// Describe how the basic data types are represented in memory (boolean, int, long, String, array of ints, array of Objects, class with fields).
 		System.out.println( "\nHow basic data types are represented in memory." );
 		System.out.println( "A 'boolean' in Java can hold one bit of information.  Its memory consumption is not precisely defined." );
 		System.out.println( "Consensus on StackOverflow is that a single boolean consumes 32 bits of memory, but an array of booleans will consume one byte per element (not one bit per element)." );
+
+		logger.debug( "BasicDataTypes() method ended." );
 	}
 }

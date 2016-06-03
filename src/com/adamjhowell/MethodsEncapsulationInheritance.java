@@ -1,6 +1,9 @@
 package com.adamjhowell;
 
 
+import org.slf4j.Logger;
+
+
 /**
  * Created by Adam Howell on 2016-05-19.
  * This will show my understanding of the Methods, Encapsulation, and Inheritance requirements for the Java Apprentice badge.
@@ -25,8 +28,9 @@ class MethodsEncapsulationInheritance
 	 * Show how to override a method in a subclass, talk about pluses and minuses in doing so.
 	 * Show how to overload constructors and methods, talk about pluses and minuses in doing so.
 	 */
-	static void Methods()
+	static void Methods( Logger logger )
 	{
+		logger.debug( "Methods() method started." );
 		/**
 		 * Show how to use a common piece of logic from two different classes, in three different ways:
 		 *   1) by composition,
@@ -37,5 +41,7 @@ class MethodsEncapsulationInheritance
 		 *        one in XML, one in line-oriented text,
 		 *        but both need to reuse logic to open the file in the same way.
 		 */
+
+		logger.debug( "Methods() method ended." );
 	}
 }

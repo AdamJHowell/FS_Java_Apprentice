@@ -11,10 +11,10 @@ import org.slf4j.LoggerFactory;
  */
 class Library
 {
-	private final Logger LibraryLogger = LoggerFactory.getLogger( FS_Java_Apprentice.class );
+	private static final Logger LibraryLogger = LoggerFactory.getLogger( Library.class );
 
 
-	void Logging( String inName )
+	void Logging()
 	{
 		/**
 		 * Write an application that uses the slf4j logging library directly (can also choose log4j if you want).
@@ -24,6 +24,10 @@ class Library
 		 *   Turn on DEBUG in the logging config to show DEBUG output.
 		 *   Configure logging to go to both the console and a log file.
 		 */
-		LibraryLogger.info( "Logging at informational-level. {}", inName );
+
+		LibraryLogger.error( "Errors require action on the part of the team." );
+		LibraryLogger.warn( "Warn indicates a problem, but doesn't require action." );
+		LibraryLogger.info( "Informational logging can contain almost anything." );
+		LibraryLogger.debug( "Debug logging may be verbose, and is used to find problems in the code." );
 	}
 }
